@@ -1,6 +1,6 @@
 
 module.exports = {
-  pathPrefix: "",
+  pathPrefix: "/api-playground",
   siteMetadata: {
     title: 'Metamask JSON-RPC API',
     description: 'This API lets you interact with an Ethereum Network via Metamask',
