@@ -9,15 +9,20 @@ const MyApp: React.FC = () => {
     <>
       <Grid container alignContent="center" alignItems="center" justify="center" direction="column">
         <img className="logo" alt="logo" src="https://raw.githubusercontent.com/MetaMask/brand-resources/master/SVG/metamask-fox.svg" style={{ paddingTop: "10%", height: "400px" }} />
-        <br/>
+        <br />
         <Typography variant="h1">Metamask JSON-RPC</Typography>
         <Typography gutterBottom style={{ paddingTop: "100px", paddingBottom: "20px" }} variant="inherit">
           This API lets you interact with an EVM-based network via JSON-RPC
         </Typography>
-        <br/>
-        <Button variant="contained" color="primary" href="/api-documentation">
-          API Reference Documentation
-        </Button>
+        <br />
+        <Link
+          component={(props: { children: any }) => (
+            <GatsbyLink to={"/api-documentation"} style={{ textDecoration: "none", color: grey[500], marginRight: "10px" }} activeStyle={{ color: grey[500] }}>
+              {props.children}
+            </GatsbyLink>
+          )}>
+          <Button variant="contained" color="primary">API Reference Documentation</Button>
+        </Link>
         <br />
         <br />
         <br />
