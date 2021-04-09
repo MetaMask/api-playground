@@ -10,9 +10,9 @@ const MyApp: React.FC = () => {
       <Grid container alignContent="center" alignItems="center" justify="center" direction="column">
         <img className="logo" alt="logo" src="https://raw.githubusercontent.com/MetaMask/brand-resources/master/SVG/metamask-fox.svg" style={{ paddingTop: "10%", height: "400px" }} />
         <br />
-        <Typography variant="h1">Metamask JSON-RPC</Typography>
+        <Typography variant="h1">MetaMask JSON-RPC</Typography>
         <Typography gutterBottom style={{ paddingTop: "100px", paddingBottom: "20px" }} variant="inherit">
-          This API lets you interact with an EVM-based network via JSON-RPC
+          This API lets you interact with MetaMask via JSON-RPC
         </Typography>
         <br />
         <Link

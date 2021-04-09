@@ -2,8 +2,8 @@
 module.exports = {
   pathPrefix: "/api-playground",
   siteMetadata: {
-    title: 'Metamask JSON-RPC API',
-    description: 'This API lets you interact with an Ethereum Network via Metamask',
+    title: 'MetaMask JSON-RPC API',
+    description: 'This API lets you interact with an Ethereum Network via MetaMask',
     logoUrl: 'https://raw.githubusercontent.com/MetaMask/brand-resources/master/SVG/metamask-fox.svg',
     primaryColor: '#3f51b5', //material-ui primary color
     secondaryColor: '#f50057', //material-ui secondary color
@@ -21,7 +21,7 @@ module.exports = {
     ],
     footerLinks: [
       {
-        name: 'Metamask',
+        name: 'MetaMask',
         link: 'https://metamask.io'
       }
     ]

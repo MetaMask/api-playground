@@ -122,7 +122,7 @@ const ApiDocumentation: React.FC = () => {
             url={inspectorUrl}
             customTransport={{
               type: "plugin",
-              name: "Metamask",
+              name: "MetaMask",
               transport: {
                 type: "postmessageiframe",
               },
@@ -194,7 +194,7 @@ const ApiDocumentation: React.FC = () => {
         </DialogContent>
         <DialogActions>
           <Button onClick={() => window.location.reload()}>Refresh</Button>
-          <Button startIcon={<Avatar src={"https://raw.githubusercontent.com/MetaMask/brand-resources/master/SVG/metamask-fox.svg"} style={{ opacity: "0.9", height: "24px", width: "24px" }} />} variant="contained" color="primary" href="https://metamask.io/download.html">Download MetaMask</Button>
+          <Button startIcon={<Avatar src={"https://raw.githubusercontent.com/MetaMask/brand-resources/master/SVG/metamask-fox.svg"} style={{ opacity: "0.9", height: "24px", width: "24px" }} />} variant="contained" color="primary" href="https://metamask.io/download.html" target="_blank">Download MetaMask</Button>
         </DialogActions>
       </Dialog>
     </>
