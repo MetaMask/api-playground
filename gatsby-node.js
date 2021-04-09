@@ -35,16 +35,7 @@ exports.onCreateWebpackConfig = ({
   plugins,
   actions,
 }) => {
-  if (stage !== "build-html") {
-    actions.setWebpackConfig({
-      plugins: [
-        new MonacoWebpackPlugin({
-          // available options are documented at https://github.com/Microsoft/monaco-editor-webpack-plugin#options
-          languages: ["json"]
-        }),
-      ],
-    })
-  } else {
+  if (stage === "build-html" || stage === "develop-html") {
     actions.setWebpackConfig({
       module: {
         rules: [
@@ -67,5 +58,14 @@ exports.onCreateWebpackConfig = ({
         ],
       },
     });
+  } else {
+    actions.setWebpackConfig({
+      plugins: [
+        new MonacoWebpackPlugin({
+          // available options are documented at https://github.com/Microsoft/monaco-editor-webpack-plugin#options
+          languages: ["json"]
+        }),
+      ],
+    })
   }
 }
