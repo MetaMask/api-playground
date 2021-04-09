@@ -185,7 +185,7 @@ const ApiDocumentation: React.FC = () => {
               <Warning />
             </div>
             <Typography variant="h5" style={{ marginTop: "8px", marginLeft: "6px" }}>
-              MetaMask Not Detected.
+              MetaMask Not Detected
             </Typography>
           </div>
         </DialogTitle>
