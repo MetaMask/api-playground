@@ -85,6 +85,12 @@ const ApiDocumentation: React.FC = () => {
   `);
   const [openrpcDocument, setOpenrpcDocument] = useState<OpenrpcDocument>();
   const [inspectorUrl, setInspectorUrl] = useState<string>();
+  const [methodFromUrl, setMethodFromUrl] = useState<string>(window.location.hash.substring(1));
+  const [uiSchema, setUiSchema] = useState<any>({
+    params: {},
+    methods: {},
+    contentDescriptors: { "ui:hidden": true }
+  });
 
   useEffect(() => {
     if (openrpcQueryData.openrpcDocument) {
@@ -101,104 +107,133 @@ const ApiDocumentation: React.FC = () => {
     }
   }, [openrpcDocument]);
 
-  return (
-    <>
-      <PlaygroundSplitPane
-        direction="horizontal"
-        split={horizontalSplit}
-        splitLeft={true}
-        leftStyle={{
-          paddingTop: "64px",
-          width: "100%",
-          height: "100%",
-          overflowY: "auto",
-        }}
-        rightStyle={{
-          width: "100%",
-          height: "100%",
-        }}
-        right={
-          <Inspector
-            url={inspectorUrl}
-            customTransport={{
-              type: "plugin",
-              name: "MetaMask",
-              transport: {
-                type: "postmessageiframe",
-              },
-              uri: "https://metamask.github.io/openrpc-inspector-transport",
-            }}
-            hideToggleTheme={true}
-            openrpcDocument={openrpcDocument}
-            darkMode={darkmode.value}
-            request={inspectorContents && inspectorContents.request}
-          />
+  useEffect(() => {
+    setTimeout(() => { // defer scrollTo to get elementById
+      if (methodFromUrl && methodFromUrl.length) {
+        const wrapper = document.getElementsByClassName("left-split")[0];
+        const el = document.getElementById(methodFromUrl);
+        if (el && wrapper) {
+          el.scrollIntoView();
+          wrapper.scrollBy(0, -100);
         }
-        left={
-          <>
-            <Container>
-              <Documentation
-                uiSchema={{ params: {}, methods: {}, contentDescriptors: { "ui:hidden": true } }}
-                methodPlugins={[InspectorPlugin]}
-                reactJsonOptions={reactJsonOptions}
-                schema={openrpcDocument || {} as any}
-              />
-              <div style={{ marginBottom: "20px" }} />
-            </Container>
-            <Tabs
-              variant="scrollable"
-              indicatorColor="primary"
-              value={0}
-              style={{ position: "absolute", bottom: "0", right: "25px", zIndex: 1, marginBottom: "0px" }}
-            >
-              <Tab
-                onClick={() => setHorizontalSplit(!horizontalSplit)}
-                style={{
-                  background: currentTheme.palette.background.default,
-                  width: "165px",
-                  paddingRight: "30px",
-                  border: `1px solid ${currentTheme.palette.text.hint}`,
-                }}
-                label={
-                  <div>
-                    <Typography
-                      variant="body1"><span role="img" aria-label="inspector">🕵️‍♂️</span>️ Inspector</Typography>
-                    <Tooltip title="Toggle Inspector">
-                      <IconButton style={{ position: "absolute", right: "5px", top: "20%" }} size="small">
-                        {horizontalSplit
-                          ? <ExpandMore />
-                          : <ExpandLess />
-                        }
-                      </IconButton>
-                    </Tooltip>
-                  </div>
-                }>
-              </Tab>
-            </Tabs>
-          </>
-        }>
-      </PlaygroundSplitPane>
-      <Dialog open={showInstallDialog} onClose={() => setShowInstallDialog(false)}>
-        <DialogTitle>
-          <div style={{ display: "flex" }}>
-            <div style={{ marginTop: "6px", marginLeft: "6px" }}>
-              <Warning />
-            </div>
-            <Typography variant="h5" style={{ marginTop: "8px", marginLeft: "6px" }}>
-              MetaMask Not Detected
-            </Typography>
+      }
+    });
+  }, [methodFromUrl])
+
+  useEffect(() => {
+    const hash = window.location.hash.substring(1);
+    if (hash) {
+      setMethodFromUrl(hash);
+      setUiSchema({
+        params: {},
+        methods: {
+          "ui:defaultExpanded": {
+            [hash]: true
+          },
+        },
+        contentDescriptors: { "ui:hidden": true }
+      });
+}
+  }, [window.location.hash]);
+
+return (
+  <>
+    <PlaygroundSplitPane
+      direction="horizontal"
+      split={horizontalSplit}
+      splitLeft={true}
+      leftStyle={{
+        paddingTop: "64px",
+        width: "100%",
+        height: "100%",
+        overflowY: "auto",
+      }}
+      rightStyle={{
+        width: "100%",
+        height: "100%",
+      }}
+      right={
+        <Inspector
+          url={inspectorUrl}
+          customTransport={{
+            type: "plugin",
+            name: "MetaMask",
+            transport: {
+              type: "postmessageiframe",
+            },
+            uri: "https://metamask.github.io/openrpc-inspector-transport",
+          }}
+          hideToggleTheme={true}
+          openrpcDocument={openrpcDocument}
+          darkMode={darkmode.value}
+          request={inspectorContents && inspectorContents.request}
+        />
+      }
+      left={
+        <>
+          <Container>
+            <Documentation
+              uiSchema={uiSchema}
+              methodPlugins={[InspectorPlugin]}
+              reactJsonOptions={reactJsonOptions}
+              schema={openrpcDocument || {} as any}
+            />
+            <div style={{ marginBottom: "20px" }} />
+          </Container>
+          <Tabs
+            variant="scrollable"
+            indicatorColor="primary"
+            value={0}
+            style={{ position: "absolute", bottom: "0", right: "25px", zIndex: 1, marginBottom: "0px" }}
+          >
+            <Tab
+              onClick={() => setHorizontalSplit(!horizontalSplit)}
+              style={{
+                background: currentTheme.palette.background.default,
+                width: "165px",
+                paddingRight: "30px",
+                border: `1px solid ${currentTheme.palette.text.hint}`,
+              }}
+              label={
+                <div>
+                  <Typography
+                    variant="body1"><span role="img" aria-label="inspector">🕵️‍♂️</span>️ Inspector</Typography>
+                  <Tooltip title="Toggle Inspector">
+                    <IconButton style={{ position: "absolute", right: "5px", top: "20%" }} size="small">
+                      {horizontalSplit
+                        ? <ExpandMore />
+                        : <ExpandLess />
+                      }
+                    </IconButton>
+                  </Tooltip>
+                </div>
+              }>
+            </Tab>
+          </Tabs>
+        </>
+      }>
+    </PlaygroundSplitPane>
+    <Dialog open={showInstallDialog} onClose={() => setShowInstallDialog(false)}>
+      <DialogTitle>
+        <div style={{ display: "flex" }}>
+          <div style={{ marginTop: "6px", marginLeft: "6px" }}>
+            <Warning />
           </div>
-        </DialogTitle>
-        <DialogContent dividers>
-          <Typography>Install MetaMask for your platform and refresh the page.</Typography>
-        </DialogContent>
-        <DialogActions>
-          <Button onClick={() => window.location.reload()}>Refresh</Button>
-          <Button startIcon={<Avatar src={"https://raw.githubusercontent.com/MetaMask/brand-resources/master/SVG/metamask-fox.svg"} style={{ opacity: "0.9", height: "24px", width: "24px" }} />} variant="contained" color="primary" href="https://metamask.io/download.html" target="_blank">Download MetaMask</Button>
-        </DialogActions>
-      </Dialog>
-    </>
-  );
+          <Typography variant="h5" style={{ marginTop: "8px", marginLeft: "6px" }}>
+            MetaMask Not Detected
+            </Typography>
+        </div>
+      </DialogTitle>
+      <DialogContent dividers>
+        <Typography>Install MetaMask for your platform and refresh the page.</Typography>
+      </DialogContent>
+      <DialogActions>
+        <Button onClick={() => window.location.reload()}>Refresh</Button>
+        <Button startIcon={<Avatar src={"https://raw.githubusercontent.com/MetaMask/brand-resources/master/SVG/metamask-fox.svg"} style={{ opacity: "0.9", height: "24px", width: "24px" }} />} variant="contained" color="primary" href="https://metamask.io/download.html" target="_blank">Download MetaMask</Button>
+      </DialogActions>
+    </Dialog>
+  </>
+);
 
 };
 
