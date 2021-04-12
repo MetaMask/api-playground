@@ -1925,32 +1925,10 @@
     strict-event-emitter-types "^2.0.0"
     ws "^7.0.0"
 
-"@open-rpc/docs-react@1.4.1":
+"@open-rpc/docs-react@1.4.1", "@open-rpc/docs-react@^1.1.4":
   version "1.4.1"
   resolved "https://registry.yarnpkg.com/@open-rpc/docs-react/-/docs-react-1.4.1.tgz#ab403f1b5d0364990712be81487b484fd3867f79"
   integrity sha512-H0Rw2YQxtod0WYi1KngPRWDuNnAZbAmkw7EAY6UPFmZRA3DmtX+dlguRBFbTiwduxbVVgQ7MVYxAankQVLOFww==
-  dependencies:
-    "@material-ui/core" "4.9.8"
-    "@material-ui/icons" "4.9.1"
-    "@material-ui/lab" "4.0.0-alpha.47"
-    "@material-ui/styles" "^4.7.1"
-    "@open-rpc/examples" "^1.6.1"
-    "@types/react-syntax-highlighter" "^13.5.0"
-    "@xops.net/json-schema-to-react-tree" "^1.0.2"
-    hash-color-material "^1.1.3"
-    jest-transform-css "^2.0.0"
-    json-schema "^0.2.3"
-    lodash "^4.17.15"
-    react "^16.12.0"
-    react-dom "^16.12.0"
-    react-json-view "^1.19.1"
-    react-markdown "^4.0.6"
-    react-syntax-highlighter "^15.4.3"
-
-"@open-rpc/docs-react@^1.1.4":
-  version "1.3.0"
-  resolved "https://registry.yarnpkg.com/@open-rpc/docs-react/-/docs-react-1.3.0.tgz#19b6ef8910bff0bfffd8bde2cec116b912680672"
-  integrity sha512-J6J1PAO/XHmVmd5nfvcOM4qzsLLQ69Yrb3uW1F/lQyVXszv+5DiLj77cqvfn9D9nP2Lk/kpTjepzXtDQFxWfPg==
   dependencies:
     "@material-ui/core" "4.9.8"
     "@material-ui/icons" "4.9.1"
