@@ -133,7 +133,7 @@ const ApiDocumentation: React.FC = () => {
         },
         contentDescriptors: { "ui:hidden": true }
       });
-}
+    }
   }, [window.location.hash]);
 
 return (
