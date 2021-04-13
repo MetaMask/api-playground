@@ -52,10 +52,10 @@ const PlaygroundSplitPane: React.FC<IProps> = (props) => {
       <div style={
         props.leftStyle ? { ...props.leftStyle, ...{ display: "flex", flexDirection: "column", height: "100%" } }
           : { display: "flex", flexDirection: "column", height: "100%" }
-      } key={1}>
+      } key={1} className="left-split">
         {props.left}
       </div>
-      <div key={2} style={props.rightStyle}>
+      <div key={2} style={props.rightStyle} className="right-split">
         {props.right}
       </div>
     </SplitPane >
