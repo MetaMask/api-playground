@@ -1,52 +1,69 @@
 {
-    "name": "@metamask/api-playground",
-    "description": "",
-    "version": "0.0.6",
-    "dependencies": {
-        "@apidevtools/json-schema-ref-parser": "^9.0.7",
-        "@etclabscore/react-monaco-editor": "1.0.4",
-        "@material-ui/core": "4.9.8",
-        "@material-ui/icons": "4.9.1",
-        "@material-ui/lab": "4.0.0-alpha.47",
-        "@material-ui/styles": "4.9.6",
-        "@mdx-js/mdx": "^1.5.4",
-        "@mdx-js/react": "^1.5.4",
-        "@metamask/api-specs": "0.0.26",
-        "@open-rpc/docs-react": "1.4.1",
-        "@open-rpc/inspector": "^1.5.4",
-        "@open-rpc/schema-utils-js": "^1.14.3",
-        "@xops.net/gatsby-openrpc-theme": "1.1.8",
-        "gatsby": "2.32.11",
-        "gatsby-plugin-mdx": "^1.0.67",
-        "loader-utils": "2.0.0",
-        "lodash": "^4.17.15",
-        "monaco-editor": "0.18.1",
-        "react": "16.12.0",
-        "react-dom": "16.12.0",
-        "react-helmet": "^5.2.1",
-        "react-split-pane": "^0.1.87",
-        "reusable": "1.0.1",
-        "use-dark-mode": "^2.3.1"
-    },
-    "devDependencies": {
-        "@types/react-helmet": "^5.0.15",
-        "monaco-editor-webpack-plugin": "1.7.0",
-        "node-fetch": "^2.6.0",
-        "prettier": "^1.19.1",
-        "typescript": "^3.7.4"
-    },
-    "keywords": [
-        "JSON-RPC"
-    ],
-    "license": "Apache-2.0",
-    "scripts": {
-        "build": "gatsby build --prefix-paths",
-        "develop": "gatsby develop",
-        "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
-        "start": "npm run develop",
-        "serve": "gatsby serve",
-        "clean": "gatsby clean",
-        "test": "exit 0",
-        "type-check": "tsc --noEmit"
+  "name": "@metamask/api-playground",
+  "description": "",
+  "version": "0.0.6",
+  "dependencies": {
+    "@apidevtools/json-schema-ref-parser": "^9.0.7",
+    "@etclabscore/react-monaco-editor": "1.0.4",
+    "@material-ui/core": "4.9.8",
+    "@material-ui/icons": "4.9.1",
+    "@material-ui/lab": "4.0.0-alpha.47",
+    "@material-ui/styles": "4.9.6",
+    "@mdx-js/mdx": "^1.5.4",
+    "@mdx-js/react": "^1.5.4",
+    "@metamask/api-specs": "0.0.26",
+    "@open-rpc/docs-react": "1.4.1",
+    "@open-rpc/inspector": "^1.5.4",
+    "@open-rpc/schema-utils-js": "^1.14.3",
+    "@xops.net/gatsby-openrpc-theme": "1.1.8",
+    "gatsby": "2.32.11",
+    "gatsby-plugin-mdx": "^1.0.67",
+    "loader-utils": "2.0.0",
+    "lodash": "^4.17.15",
+    "monaco-editor": "0.18.1",
+    "react": "16.12.0",
+    "react-dom": "16.12.0",
+    "react-helmet": "^5.2.1",
+    "react-split-pane": "^0.1.87",
+    "reusable": "1.0.1",
+    "use-dark-mode": "^2.3.1"
+  },
+  "devDependencies": {
+    "@lavamoat/allow-scripts": "^1.0.5",
+    "@types/react-helmet": "^5.0.15",
+    "monaco-editor-webpack-plugin": "1.7.0",
+    "node-fetch": "^2.6.0",
+    "prettier": "^1.19.1",
+    "typescript": "^3.7.4"
+  },
+  "keywords": [
+    "JSON-RPC"
+  ],
+  "license": "Apache-2.0",
+  "scripts": {
+    "build": "gatsby build",
+    "setup": "yarn install && yarn allow-scripts",
+    "develop": "gatsby develop",
+    "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
+    "start": "npm run develop",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean",
+    "test": "exit 0",
+    "type-check": "tsc --noEmit"
+  },
+  "lavamoat": {
+    "allowScripts": {
+      "gatsby": false,
+      "core-js": false,
+      "core-js-pure": false,
+      "gatsby-cli": false,
+      "gatsby-telemetry": false,
+      "fsevents": false,
+      "sharp": true,
+      "mozjpeg": false,
+      "pngquant-bin": false,
+      "puppeteer": false,
+      "@lavamoat/preinstall-always-fail": false
     }
+  }
 }
