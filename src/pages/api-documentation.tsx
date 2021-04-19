@@ -134,7 +134,7 @@ const ApiDocumentation: React.FC = () => {
         contentDescriptors: { "ui:hidden": true }
       });
     }
-  }, [window.location.hash]);
+  }, []);
 
 return (
   <>
@@ -174,6 +174,12 @@ return (
           <Container>
             <Documentation
               uiSchema={uiSchema}
+              onMethodToggle={(method: string, expanded: boolean) => {
+                if (expanded) {
+                  window.history.pushState(null, method, '#' + method);
+                }
+              }}
+              key={JSON.stringify(uiSchema)}
               methodPlugins={[InspectorPlugin]}
               reactJsonOptions={reactJsonOptions}
               schema={openrpcDocument || {} as any}
