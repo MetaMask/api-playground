@@ -55,6 +55,7 @@
   "license": "Apache-2.0",
   "scripts": {
     "build": "gatsby build --prefix-paths",
+    "setup": "yarn install && yarn allow-scripts",
     "develop": "gatsby develop",
     "lint": "eslint . --cache --ext js,ts",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
