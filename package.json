@@ -21,6 +21,7 @@
         "loader-utils": "2.0.0",
         "lodash": "^4.17.15",
         "monaco-editor": "0.18.1",
+        "monaco-editor-webpack-plugin": "1.7.0",
         "react": "16.12.0",
         "react-dom": "16.12.0",
         "react-helmet": "^5.2.1",
@@ -29,8 +30,20 @@
         "use-dark-mode": "^2.3.1"
     },
     "devDependencies": {
+        "@metamask/eslint-config": "^6.0.0",
+        "@metamask/eslint-config-jest": "^6.0.0",
+        "@metamask/eslint-config-nodejs": "^6.0.0",
+        "@metamask/eslint-config-typescript": "^6.0.0",
         "@types/react-helmet": "^5.0.15",
-        "monaco-editor-webpack-plugin": "1.7.0",
+        "@typescript-eslint/eslint-plugin": "^4.22.0",
+        "@typescript-eslint/parser": "^4.22.0",
+        "eslint": "^7.24.0",
+        "eslint-config-prettier": "^8.2.0",
+        "eslint-plugin-import": "^2.22.1",
+        "eslint-plugin-jest": "^24.3.5",
+        "eslint-plugin-node": "^11.1.0",
+        "eslint-plugin-prettier": "^3.4.0",
+        "eslint-plugin-react": "^7.23.2",
         "node-fetch": "^2.6.0",
         "prettier": "^1.19.1",
         "typescript": "^3.7.4"
@@ -42,6 +55,7 @@
     "scripts": {
         "build": "gatsby build --prefix-paths",
         "develop": "gatsby develop",
+        "lint": "eslint . --cache --ext js,ts",
         "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
         "start": "npm run develop",
         "serve": "gatsby serve",

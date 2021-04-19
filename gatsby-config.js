@@ -1,33 +1,34 @@
-
 module.exports = {
-  pathPrefix: "/api-playground",
+  pathPrefix: '/api-playground',
   siteMetadata: {
     title: 'MetaMask JSON-RPC API',
-    description: 'This API lets you interact with an Ethereum Network via MetaMask',
-    logoUrl: 'https://raw.githubusercontent.com/MetaMask/brand-resources/master/SVG/metamask-fox.svg',
-    primaryColor: '#3f51b5', //material-ui primary color
-    secondaryColor: '#f50057', //material-ui secondary color
+    description:
+      'This API lets you interact with an Ethereum Network via MetaMask',
+    logoUrl:
+      'https://raw.githubusercontent.com/MetaMask/brand-resources/master/SVG/metamask-fox.svg',
+    primaryColor: '#3f51b5', // material-ui primary color
+    secondaryColor: '#f50057', // material-ui secondary color
     author: '',
     menuLinks: [
       {
         name: 'Home',
         link: '/',
-        ignoreNextPrev: true
+        ignoreNextPrev: true,
       },
       {
         name: 'API Documentation',
-        link: '/api-documentation'
-      }
+        link: '/api-documentation',
+      },
     ],
     footerLinks: [
       {
         name: 'MetaMask',
-        link: 'https://metamask.io'
-      }
-    ]
+        link: 'https://metamask.io',
+      },
+    ],
   },
   plugins: [
-    "@xops.net/gatsby-openrpc-theme",
+    '@xops.net/gatsby-openrpc-theme',
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
@@ -39,6 +40,6 @@ module.exports = {
         display: 'minimal-ui',
         icon: 'src/images/metamask-fox.svg', // This path is relative to the root of the site.
       },
-    }
+    },
   ],
-}
+};
