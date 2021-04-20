@@ -23,8 +23,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - shell: bash
         run: |
-          yarn install
-          yarn allow-scripts
+          yarn setup
           yarn build
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
