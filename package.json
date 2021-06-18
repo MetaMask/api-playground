@@ -53,6 +53,10 @@
         "JSON-RPC"
     ],
     "license": "Apache-2.0",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/MetaMask/api-playground.git"
+      },
     "scripts": {
         "build": "gatsby build --prefix-paths",
         "setup": "yarn install && yarn allow-scripts",
