@@ -1810,10 +1810,10 @@
   resolved "https://registry.yarnpkg.com/@mdx-js/util/-/util-2.0.0-next.8.tgz#66ecc27b78e07a3ea2eb1a8fc5a99dfa0ba96690"
   integrity sha512-T0BcXmNzEunFkuxrO8BFw44htvTPuAoKbLvTG41otyZBDV1Rs+JMddcUuaP5vXpTWtgD3grhcrPEwyx88RUumQ==
 
-"@metamask/api-specs@0.0.26":
-  version "0.0.26"
-  resolved "https://registry.yarnpkg.com/@metamask/api-specs/-/api-specs-0.0.26.tgz#7a992f1ae989f8952cc33cf84a10371902e4bf5c"
-  integrity sha512-iZA81eOd8YE+7yRluuk58omLd8d3SW3aO5pSe1AQN9qK7oCyA+rNRphS/x+CRauXgcluotBTs4/XEizQ/tzJsQ==
+"@metamask/api-specs@0.0.29":
+  version "0.0.29"
+  resolved "https://registry.yarnpkg.com/@metamask/api-specs/-/api-specs-0.0.29.tgz#7300d6ab2be09427632ed4565f52d2ce05440ea9"
+  integrity sha512-nvwlhCBt3/1jquJco2W9vNEmnYdIb1lY8l0J23ny8ZSpPK6LO63RweY6beNfpabdtrXiKKPvIW/NjeRtYDJxeQ==
 
 "@metamask/eslint-config-jest@^6.0.0":
   version "6.0.0"
@@ -2008,7 +2008,7 @@
     strict-event-emitter-types "^2.0.0"
     ws "^7.0.0"
 
-"@open-rpc/docs-react@^1.5.0", "@open-rpc/docs-react@^1.1.4":
+"@open-rpc/docs-react@^1.1.4", "@open-rpc/docs-react@^1.5.0":
   version "1.5.0"
   resolved "https://registry.yarnpkg.com/@open-rpc/docs-react/-/docs-react-1.5.0.tgz#51461e272424a19801f4e6fa1cff4e6036038420"
   integrity sha512-6c0S3EIGbOeCu5V+hAv3YuNfeFf7ThZKNWTkOM2qgDCdcMdqeix0LyjbovnlbeE+TEqzjX5KVTU7UtwDChe1FA==
