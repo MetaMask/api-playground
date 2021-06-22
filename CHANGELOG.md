@@ -6,5 +6,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-[Unreleased]: https://github.com/MetaMask/api-playground/
+## [0.0.8]
+### Changed
+- bump api-specs which adds wallet_switchEthereumChain ([#20](https://github.com/MetaMask/api-playground/pull/20))
 
+[Unreleased]: https://github.com/MetaMask/api-playground/compare/v0.0.8...HEAD
+[0.0.8]: https://github.com/MetaMask/api-playground/releases/tag/v0.0.8
