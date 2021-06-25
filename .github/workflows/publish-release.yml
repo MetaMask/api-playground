@@ -25,3 +25,13 @@ jobs:
       - uses: MetaMask/action-publish-release@v0.1.0
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Install and Build and Deploy
+        shell: bash
+        run: |
+          yarn setup
+          git worktree add public gh-pages
+          yarn build
+          cd public
+          git add --all
+          git commit -m "gh-pages deploy"
+          git push -f origin gh-pages
