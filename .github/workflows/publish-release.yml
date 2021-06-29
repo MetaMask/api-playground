@@ -22,16 +22,11 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           node-version: ${{ steps.nvm.outputs.NODE_VERSION }}
-      - uses: MetaMask/action-publish-release@v0.1.0
+      - uses: MetaMask/action-publish-release@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - name: Install and Build and Deploy
-        shell: bash
-        run: |
-          yarn setup
-          git worktree add public gh-pages
-          yarn build
-          cd public
-          git add --all
-          git commit -m "gh-pages deploy"
-          git push -f origin gh-pages
+      - uses: MetaMask/action-publish-gh-pages@v0.0.10
+        with: 
+          directory: public
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
