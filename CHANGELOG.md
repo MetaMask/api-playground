@@ -6,6 +6,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.0.10]
+### Changed
+- Update release-pr.yml to use v1 of action ([#25](https://github.com/MetaMask/api-playground/pull/25))
+
+
 ## [0.0.9]
 ### Added
 - add gh pages action for deploy ([#23](https://github.com/MetaMask/api-playground/pull/23))
@@ -14,6 +19,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 - bump api-specs which adds wallet_switchEthereumChain ([#20](https://github.com/MetaMask/api-playground/pull/20))
 
-[Unreleased]: https://github.com/MetaMask/api-playground/compare/v0.0.9...HEAD
+[Unreleased]: https://github.com/MetaMask/api-playground/compare/v0.0.10...HEAD
+[0.0.10]: https://github.com/MetaMask/api-playground/compare/v0.0.9...v0.0.10
 [0.0.9]: https://github.com/MetaMask/api-playground/compare/v0.0.8...v0.0.9
 [0.0.8]: https://github.com/MetaMask/api-playground/releases/tag/v0.0.8
