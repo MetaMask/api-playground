@@ -7,9 +7,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ## [0.0.10]
-### Uncategorized
-- Update release-pr.yml ([#25](https://github.com/MetaMask/api-playground/pull/25))
-- 0.0.9 ([#24](https://github.com/MetaMask/api-playground/pull/24))
+### Changed
+- Update release-pr.yml to use v1 of action ([#25](https://github.com/MetaMask/api-playground/pull/25))
+
 
 ## [0.0.9]
 ### Added
