@@ -231,7 +231,7 @@ const ApiDocumentation: React.FC = () => {
           </div>
         </DialogTitle>
         <DialogContent dividers>
-          <Typography>Install MetaMask for your platform and refresh the page. The interactive features in this documentation require installing the MetaMask extension. <b onClick={() => setShowInstallDialog(false)} >Procceed without MetaMask</b></Typography>
+          <Typography>Install MetaMask for your platform and refresh the page. The interactive features in this documentation require installing the MetaMask extension. <b onClick={() => setShowInstallDialog(false)} >Proceed without MetaMask</b></Typography>
         </DialogContent>
         <DialogActions>
           <Button onClick={() => window.location.reload()}>Refresh</Button>
