@@ -136,110 +136,110 @@ const ApiDocumentation: React.FC = () => {
     }
   }, []);
 
-return (
-  <>
-    <PlaygroundSplitPane
-      direction="horizontal"
-      split={horizontalSplit}
-      splitLeft={true}
-      leftStyle={{
-        paddingTop: "64px",
-        width: "100%",
-        height: "100%",
-        overflowY: "auto",
-      }}
-      rightStyle={{
-        width: "100%",
-        height: "100%",
-      }}
-      right={
-        <Inspector
-          url={inspectorUrl}
-          customTransport={{
-            type: "plugin",
-            name: "MetaMask",
-            transport: {
-              type: "postmessageiframe",
-            },
-            uri: "https://metamask.github.io/openrpc-inspector-transport",
-          }}
-          hideToggleTheme={true}
-          openrpcDocument={openrpcDocument}
-          darkMode={darkmode.value}
-          request={inspectorContents && inspectorContents.request}
-        />
-      }
-      left={
-        <>
-          <Container>
-            <Documentation
-              uiSchema={uiSchema}
-              onMethodToggle={(method: string, expanded: boolean) => {
-                if (expanded) {
-                  window.history.pushState(null, method, '#' + method);
-                }
-              }}
-              key={JSON.stringify(uiSchema)}
-              methodPlugins={[InspectorPlugin]}
-              reactJsonOptions={reactJsonOptions}
-              schema={openrpcDocument || {} as any}
-            />
-            <div style={{ marginBottom: "20px" }} />
-          </Container>
-          <Tabs
-            variant="scrollable"
-            indicatorColor="primary"
-            value={0}
-            style={{ position: "absolute", bottom: "0", right: "25px", zIndex: 1, marginBottom: "0px" }}
-          >
-            <Tab
-              onClick={() => setHorizontalSplit(!horizontalSplit)}
-              style={{
-                background: currentTheme.palette.background.default,
-                width: "165px",
-                paddingRight: "30px",
-                border: `1px solid ${currentTheme.palette.text.hint}`,
-              }}
-              label={
-                <div>
-                  <Typography
-                    variant="body1"><span role="img" aria-label="inspector">🕵️‍♂️</span>️ Inspector</Typography>
-                  <Tooltip title="Toggle Inspector">
-                    <IconButton style={{ position: "absolute", right: "5px", top: "20%" }} size="small">
-                      {horizontalSplit
-                        ? <ExpandMore />
-                        : <ExpandLess />
-                      }
-                    </IconButton>
-                  </Tooltip>
-                </div>
-              }>
-            </Tab>
-          </Tabs>
-        </>
-      }>
-    </PlaygroundSplitPane>
-    <Dialog open={showInstallDialog} onClose={() => setShowInstallDialog(false)}>
-      <DialogTitle>
-        <div style={{ display: "flex" }}>
-          <div style={{ marginTop: "6px", marginLeft: "6px" }}>
-            <Warning />
-          </div>
-          <Typography variant="h5" style={{ marginTop: "8px", marginLeft: "6px" }}>
-            MetaMask Not Detected
+  return (
+    <>
+      <PlaygroundSplitPane
+        direction="horizontal"
+        split={horizontalSplit}
+        splitLeft={true}
+        leftStyle={{
+          paddingTop: "64px",
+          width: "100%",
+          height: "100%",
+          overflowY: "auto",
+        }}
+        rightStyle={{
+          width: "100%",
+          height: "100%",
+        }}
+        right={
+          <Inspector
+            url={inspectorUrl}
+            customTransport={{
+              type: "plugin",
+              name: "MetaMask",
+              transport: {
+                type: "postmessageiframe",
+              },
+              uri: "https://metamask.github.io/openrpc-inspector-transport",
+            }}
+            hideToggleTheme={true}
+            openrpcDocument={openrpcDocument}
+            darkMode={darkmode.value}
+            request={inspectorContents && inspectorContents.request}
+          />
+        }
+        left={
+          <>
+            <Container>
+              <Documentation
+                uiSchema={uiSchema}
+                onMethodToggle={(method: string, expanded: boolean) => {
+                  if (expanded) {
+                    window.history.pushState(null, method, '#' + method);
+                  }
+                }}
+                key={JSON.stringify(uiSchema)}
+                methodPlugins={[InspectorPlugin]}
+                reactJsonOptions={reactJsonOptions}
+                schema={openrpcDocument || {} as any}
+              />
+              <div style={{ marginBottom: "20px" }} />
+            </Container>
+            <Tabs
+              variant="scrollable"
+              indicatorColor="primary"
+              value={0}
+              style={{ position: "absolute", bottom: "0", right: "25px", zIndex: 1, marginBottom: "0px" }}
+            >
+              <Tab
+                onClick={() => setHorizontalSplit(!horizontalSplit)}
+                style={{
+                  background: currentTheme.palette.background.default,
+                  width: "165px",
+                  paddingRight: "30px",
+                  border: `1px solid ${currentTheme.palette.text.hint}`,
+                }}
+                label={
+                  <div>
+                    <Typography
+                      variant="body1"><span role="img" aria-label="inspector">🕵️‍♂️</span>️ Inspector</Typography>
+                    <Tooltip title="Toggle Inspector">
+                      <IconButton style={{ position: "absolute", right: "5px", top: "20%" }} size="small">
+                        {horizontalSplit
+                          ? <ExpandMore />
+                          : <ExpandLess />
+                        }
+                      </IconButton>
+                    </Tooltip>
+                  </div>
+                }>
+              </Tab>
+            </Tabs>
+          </>
+        }>
+      </PlaygroundSplitPane>
+      <Dialog open={showInstallDialog} onClose={() => setShowInstallDialog(false)}>
+        <DialogTitle>
+          <div style={{ display: "flex" }}>
+            <div style={{ marginTop: "6px", marginLeft: "6px" }}>
+              <Warning />
+            </div>
+            <Typography variant="h5" style={{ marginTop: "8px", marginLeft: "6px" }}>
+              MetaMask Not Detected
             </Typography>
-        </div>
-      </DialogTitle>
-      <DialogContent dividers>
-        <Typography>Install MetaMask for your platform and refresh the page.</Typography>
-      </DialogContent>
-      <DialogActions>
-        <Button onClick={() => window.location.reload()}>Refresh</Button>
-        <Button startIcon={<Avatar src={"https://raw.githubusercontent.com/MetaMask/brand-resources/master/SVG/metamask-fox.svg"} style={{ opacity: "0.9", height: "24px", width: "24px" }} />} variant="contained" color="primary" href="https://metamask.io/download.html" target="_blank">Download MetaMask</Button>
-      </DialogActions>
-    </Dialog>
-  </>
-);
+          </div>
+        </DialogTitle>
+        <DialogContent dividers>
+          <Typography>Install MetaMask for your platform and refresh the page. The interactive features in this documentation require installing the MetaMask extension. <b onClick={() => setShowInstallDialog(false)} > Procceed without MetaMask</b></Typography>
+        </DialogContent>
+        <DialogActions>
+          <Button onClick={() => window.location.reload()}>Refresh</Button>
+          <Button startIcon={<Avatar src={"https://raw.githubusercontent.com/MetaMask/brand-resources/master/SVG/metamask-fox.svg"} style={{ opacity: "0.9", height: "24px", width: "24px" }} />} variant="contained" color="primary" href="https://metamask.io/download.html" target="_blank">Download MetaMask</Button>
+        </DialogActions>
+      </Dialog>
+    </>
+  );
 
 };
 
