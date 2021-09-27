@@ -7,8 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ## [0.0.12]
-### Uncategorized
-- Added Proceed Without MetaMask ([#29](https://github.com/MetaMask/api-playground/pull/29))
+### Added
+- Proceed Without MetaMask ([#29](https://github.com/MetaMask/api-playground/pull/29))
 
 ## [0.0.11]
 ### Changed
