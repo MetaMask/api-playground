@@ -14,6 +14,7 @@ import Warning from "@material-ui/icons/Warning";
 import PlaygroundSplitPane from "../components/PlaygroundSplitPane";
 const $RefParser = require("@apidevtools/json-schema-ref-parser"); //tslint:disable-line
 import { useTheme } from "@material-ui/core/styles";
+import Link from "@material-ui/core/Link";
 import useInspectorActionStore from "../stores/inspectorActionStore";
 import { OpenrpcDocument } from "@open-rpc/meta-schema";
 
@@ -231,7 +232,7 @@ const ApiDocumentation: React.FC = () => {
           </div>
         </DialogTitle>
         <DialogContent dividers>
-          <Typography>Install MetaMask for your platform and refresh the page. The interactive features in this documentation require installing the MetaMask extension. <b onClick={() => setShowInstallDialog(false)} >Proceed without MetaMask</b></Typography>
+          <Typography>Install MetaMask for your platform and refresh the page. The interactive features in this documentation require installing the MetaMask extension. <Link variant="body2" component="button" onClick={() => setShowInstallDialog(false)} >Proceed without MetaMask</Link></Typography>
         </DialogContent>
         <DialogActions>
           <Button onClick={() => window.location.reload()}>Refresh</Button>
