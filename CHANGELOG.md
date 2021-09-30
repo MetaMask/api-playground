@@ -7,9 +7,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ## [0.0.12]
-### Uncategorized
-- Changed "Proceed without Metamask" element to Link instead of <b> tag ([#31](https://github.com/MetaMask/api-playground/pull/31))
-- Added Proceed Without MetaMask ([#29](https://github.com/MetaMask/api-playground/pull/29))
+### Added
+- Proceed Without MetaMask ([#29](https://github.com/MetaMask/api-playground/pull/29))
+
+### Changed
+- "Proceed without Metamask" element to Link instead of <b> tag ([#31](https://github.com/MetaMask/api-playground/pull/31))
 
 ## [0.0.11]
 ### Changed
