@@ -6,6 +6,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.0.12]
+### Added
+- Proceed Without MetaMask ([#29](https://github.com/MetaMask/api-playground/pull/29))
+
+### Changed
+- "Proceed without Metamask" element to Link instead of <b> tag ([#31](https://github.com/MetaMask/api-playground/pull/31))
+
 ## [0.0.11]
 ### Changed
 - Update publish-release.yml to use proper branch name ([#27](https://github.com/MetaMask/api-playground/pull/27))
@@ -23,7 +30,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 - bump api-specs which adds wallet_switchEthereumChain ([#20](https://github.com/MetaMask/api-playground/pull/20))
 
-[Unreleased]: https://github.com/MetaMask/api-playground/compare/v0.0.11...HEAD
+[Unreleased]: https://github.com/MetaMask/api-playground/compare/v0.0.12...HEAD
+[0.0.12]: https://github.com/MetaMask/api-playground/compare/v0.0.11...v0.0.12
 [0.0.11]: https://github.com/MetaMask/api-playground/compare/v0.0.10...v0.0.11
 [0.0.10]: https://github.com/MetaMask/api-playground/compare/v0.0.9...v0.0.10
 [0.0.9]: https://github.com/MetaMask/api-playground/compare/v0.0.8...v0.0.9
