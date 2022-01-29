@@ -11,7 +11,7 @@
     "@material-ui/styles": "4.9.6",
     "@mdx-js/mdx": "^1.5.4",
     "@mdx-js/react": "^1.5.4",
-    "@metamask/api-specs": "0.0.29",
+    "@metamask/api-specs": "0.0.30",
     "@open-rpc/docs-react": "^1.5.0",
     "@open-rpc/inspector": "^1.5.4",
     "@open-rpc/schema-utils-js": "^1.14.3",
