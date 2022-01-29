@@ -7,8 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ## [0.0.13]
-### Uncategorized
-- Changed API specs package to bump to 0.0.30 ([#34](https://github.com/MetaMask/api-playground/pull/34))
+### Changed
+- API specs package to bump to 0.0.30 ([#34](https://github.com/MetaMask/api-playground/pull/34))
 
 ## [0.0.12]
 ### Added
