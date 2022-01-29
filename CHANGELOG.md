@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.0.13]
+### Uncategorized
+- Changed API specs package to bump to 0.0.30 ([#34](https://github.com/MetaMask/api-playground/pull/34))
+
 ## [0.0.12]
 ### Added
 - Proceed Without MetaMask ([#29](https://github.com/MetaMask/api-playground/pull/29))
@@ -30,7 +34,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 - bump api-specs which adds wallet_switchEthereumChain ([#20](https://github.com/MetaMask/api-playground/pull/20))
 
-[Unreleased]: https://github.com/MetaMask/api-playground/compare/v0.0.12...HEAD
+[Unreleased]: https://github.com/MetaMask/api-playground/compare/v0.0.13...HEAD
+[0.0.13]: https://github.com/MetaMask/api-playground/compare/v0.0.12...v0.0.13
 [0.0.12]: https://github.com/MetaMask/api-playground/compare/v0.0.11...v0.0.12
 [0.0.11]: https://github.com/MetaMask/api-playground/compare/v0.0.10...v0.0.11
 [0.0.10]: https://github.com/MetaMask/api-playground/compare/v0.0.9...v0.0.10
