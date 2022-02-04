@@ -1810,11 +1810,6 @@
   resolved "https://registry.yarnpkg.com/@mdx-js/util/-/util-2.0.0-next.8.tgz#66ecc27b78e07a3ea2eb1a8fc5a99dfa0ba96690"
   integrity sha512-T0BcXmNzEunFkuxrO8BFw44htvTPuAoKbLvTG41otyZBDV1Rs+JMddcUuaP5vXpTWtgD3grhcrPEwyx88RUumQ==
 
-"@metamask/api-specs@0.0.30":
-  version "0.0.30"
-  resolved "https://registry.yarnpkg.com/@metamask/api-specs/-/api-specs-0.0.30.tgz#27718f42c70fa098abbd692d254313d3faafdc11"
-  integrity sha512-dFCsczrMdzlig2ULYG4G71kX9Ym3Y2sq0ETU0drxGWK6iIXGt5fJE7it3KF5uGPlYQMNgnpowF+OIA7sWQ759w==
-
 "@metamask/eslint-config-jest@^6.0.0":
   version "6.0.0"
   resolved "https://registry.yarnpkg.com/@metamask/eslint-config-jest/-/eslint-config-jest-6.0.0.tgz#9e10cfbca31236afd7be2058be70365084e540d6"

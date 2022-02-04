@@ -3,30 +3,7 @@
  *
  * See: https://www.gatsbyjs.org/docs/node-apis/
  */
-const MetamaskOpenRPCDocument = require('@metamask/api-specs').default;
 const MonacoWebpackPlugin = require('monaco-editor-webpack-plugin');
-
-// get OpenRPC Document at build time
-const resultData = JSON.stringify(MetamaskOpenRPCDocument);
-
-exports.sourceNodes = async ({
-  actions: { createNode },
-  createContentDigest,
-}) => {
-  // deref doc
-  // create node for build time openrpc document on the site
-  createNode({
-    openrpcDocument: resultData,
-    // required fields
-    id: `openrpcDocument`,
-    parent: null,
-    children: [],
-    internal: {
-      type: `OpenrpcDocument`,
-      contentDigest: createContentDigest(resultData),
-    },
-  });
-};
 
 exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
   if (stage === 'build-html' || stage === 'develop-html') {
