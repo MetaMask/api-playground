@@ -7,11 +7,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ## [0.0.15]
-### Uncategorized
+### Changed
 - Update .nvmrc ([#46](https://github.com/MetaMask/api-playground/pull/46))
+### Added
 - Dynamic loading ([#45](https://github.com/MetaMask/api-playground/pull/45))
 - Document development ([#43](https://github.com/MetaMask/api-playground/pull/43))
-- 0.0.14 ([#40](https://github.com/MetaMask/api-playground/pull/40))
 
 ## [0.0.14]
 
