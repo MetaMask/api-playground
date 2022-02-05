@@ -18,6 +18,8 @@ import Link from "@material-ui/core/Link";
 import useInspectorActionStore from "../stores/inspectorActionStore";
 import { OpenrpcDocument } from "@open-rpc/meta-schema";
 
+const docsUrl = 'https://raw.githubusercontent.com/MetaMask/api-specs/gh-pages/latest/metamask-openrpc.json';
+
 interface RequestArguments {
   readonly method: string;
   readonly params?: readonly unknown[] | object;
@@ -76,15 +78,9 @@ const ApiDocumentation: React.FC = () => {
     name: false,
   });
 
-  const openrpcQueryData = useStaticQuery(graphql`
-    query {
-      openrpcDocument {
-        id
-        openrpcDocument
-      }
-    }
-  `);
   const [openrpcDocument, setOpenrpcDocument] = useState<OpenrpcDocument>();
+  const [isFetching, setFetching] = useState<boolean>(false);
+  const [latestSpec, setLatestSpec] = useState<any>(null);
   const [inspectorUrl, setInspectorUrl] = useState<string>();
   const [methodFromUrl, setMethodFromUrl] = useState<string>(window.location.hash.substring(1));
   const [uiSchema, setUiSchema] = useState<any>({
@@ -94,10 +90,22 @@ const ApiDocumentation: React.FC = () => {
   });
 
   useEffect(() => {
-    if (openrpcQueryData.openrpcDocument) {
-      $RefParser.dereference(JSON.parse(openrpcQueryData.openrpcDocument.openrpcDocument)).then(setOpenrpcDocument);
+    if (!latestSpec && !isFetching) {
+      setFetching(true);
+      getDocs()
+      .then((json) => {
+        setLatestSpec(json);
+        setFetching(false);
+      })
+      .catch(console.error);
     }
-  }, [openrpcQueryData]);
+  });
+
+  useEffect(() => {
+    if (latestSpec) {
+      $RefParser.dereference(latestSpec).then(setOpenrpcDocument);
+    }
+  }, [latestSpec]);
 
   useEffect(() => {
     if (!openrpcDocument) {
@@ -243,5 +251,11 @@ const ApiDocumentation: React.FC = () => {
   );
 
 };
+
+async function getDocs () {
+  const doc = await fetch(docsUrl);
+  const json = await doc.json();
+  return json;
+}
 
 export default ApiDocumentation;
