@@ -29,7 +29,7 @@
     "use-dark-mode": "^2.3.1"
   },
   "devDependencies": {
-    "@lavamoat/allow-scripts": "^1.0.5",
+    "@lavamoat/allow-scripts": "^2.0.3",
     "@metamask/eslint-config": "^6.0.0",
     "@metamask/eslint-config-jest": "^6.0.0",
     "@metamask/eslint-config-nodejs": "^6.0.0",
@@ -80,7 +80,17 @@
       "mozjpeg": false,
       "pngquant-bin": false,
       "puppeteer": false,
-      "@lavamoat/preinstall-always-fail": false
+      "@lavamoat/preinstall-always-fail": false,
+      "@xops.net/gatsby-openrpc-theme>gatsby-plugin-offline>workbox-build>strip-comments>babel-plugin-transform-object-rest-spread>babel-runtime>core-js": false,
+      "@xops.net/gatsby-openrpc-theme>gatsby-plugin-sharp>imagemin-mozjpeg>mozjpeg": false,
+      "@xops.net/gatsby-openrpc-theme>gatsby-plugin-sharp>imagemin-pngquant>pngquant-bin": false,
+      "@xops.net/gatsby-openrpc-theme>gatsby-plugin-sharp>sharp": false,
+      "@xops.net/gatsby-openrpc-theme>mermaid.cli>puppeteer": false,
+      "gatsby>core-js": false,
+      "gatsby>eslint-plugin-jsx-a11y>aria-query>@babel/runtime-corejs3>core-js-pure": false,
+      "gatsby>gatsby-cli": false,
+      "gatsby>gatsby-telemetry": false,
+      "gatsby>webpack-dev-server>chokidar>fsevents": false
     }
   }
 }
