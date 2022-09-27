@@ -7,7 +7,7 @@ module.exports = {
     logoUrl:
       'https://raw.githubusercontent.com/MetaMask/brand-resources/master/SVG/metamask-fox.svg',
     primaryColor: '#3f51b5', // material-ui primary color
-    secondaryColor: '#f50057', // material-ui secondary color
+    secondaryColor: '#3f51b5', // material-ui secondary color
     author: '',
     menuLinks: [
       {
