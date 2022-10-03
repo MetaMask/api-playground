@@ -12,7 +12,7 @@
     "@mdx-js/mdx": "^1.5.4",
     "@mdx-js/react": "^1.5.4",
     "@open-rpc/docs-react": "^1.5.0",
-    "@open-rpc/inspector": "^1.5.4",
+    "@open-rpc/inspector": "^1.7.1",
     "@open-rpc/schema-utils-js": "^1.14.3",
     "@xops.net/gatsby-openrpc-theme": "1.1.8",
     "gatsby": "2.32.11",
@@ -80,7 +80,8 @@
       "mozjpeg": false,
       "pngquant-bin": false,
       "puppeteer": false,
-      "@lavamoat/preinstall-always-fail": false
+      "@lavamoat/preinstall-always-fail": false,
+      "es5-ext": false
     }
   }
 }
