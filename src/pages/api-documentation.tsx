@@ -1,13 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { EventEmitter } from "events";
-import { useStaticQuery, graphql } from "gatsby";
 import Documentation from "@open-rpc/docs-react";
 import useDarkMode from "use-dark-mode";
 import "./api-documentation.css";
 import InspectorPlugin from "../docs-react-plugins";
 import Inspector from "@open-rpc/inspector";
 import * as monaco from "monaco-editor";
-import { Button, Grid, Typography, InputBase, Container, Tab, Tabs, IconButton, Tooltip, Dialog, DialogTitle, DialogActions, DialogContent, Avatar } from "@material-ui/core";
+import { Button, Typography,Container, Tab, Tabs, IconButton, Tooltip, Dialog, DialogTitle, DialogActions, DialogContent, Avatar } from "@material-ui/core";
 import ExpandMore from "@material-ui/icons/ExpandMore";
 import ExpandLess from "@material-ui/icons/ExpandLess";
 import Warning from "@material-ui/icons/Warning";
@@ -168,6 +167,7 @@ const ApiDocumentation: React.FC = () => {
               type: "plugin",
               name: "MetaMask",
               transport: {
+                name: "PostMessageIframe",
                 type: "postmessageiframe",
               },
               uri: "https://metamask.github.io/openrpc-inspector-transport",
