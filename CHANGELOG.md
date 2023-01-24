@@ -7,8 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ## [0.1.0]
-### Uncategorized
-- Changed filename for metamask OpenRPC document ([#74](https://github.com/MetaMask/api-playground/pull/74))
+### Changed
+- filename for metamask OpenRPC document ([#74](https://github.com/MetaMask/api-playground/pull/74))
 
 ## [0.0.16]
 ### Uncategorized
