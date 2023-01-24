@@ -17,7 +17,7 @@ import Link from "@material-ui/core/Link";
 import useInspectorActionStore from "../stores/inspectorActionStore";
 import { OpenrpcDocument } from "@open-rpc/meta-schema";
 
-const docsUrl = 'https://raw.githubusercontent.com/MetaMask/api-specs/gh-pages/latest/metamask-openrpc.json';
+const docsUrl = 'https://raw.githubusercontent.com/MetaMask/api-specs/gh-pages/latest/openrpc.json';
 
 interface RequestArguments {
   readonly method: string;
