@@ -1,7 +1,7 @@
 {
   "name": "@metamask/api-playground",
   "description": "",
-  "version": "0.0.15",
+  "version": "0.1.0",
   "dependencies": {
     "@apidevtools/json-schema-ref-parser": "^9.0.7",
     "@etclabscore/react-monaco-editor": "1.0.4",
@@ -12,12 +12,12 @@
     "@mdx-js/mdx": "^1.5.4",
     "@mdx-js/react": "^1.5.4",
     "@open-rpc/docs-react": "^1.5.0",
-    "@open-rpc/inspector": "^1.5.4",
+    "@open-rpc/inspector": "^1.7.1",
     "@open-rpc/schema-utils-js": "^1.14.3",
     "@xops.net/gatsby-openrpc-theme": "1.1.8",
     "gatsby": "2.32.11",
-    "gatsby-plugin-mdx": "^1.0.67",
-    "loader-utils": "2.0.0",
+    "gatsby-plugin-mdx": "^2.14.1",
+    "loader-utils": "2.0.4",
     "lodash": "^4.17.15",
     "monaco-editor": "0.18.1",
     "monaco-editor-webpack-plugin": "1.7.0",
@@ -70,27 +70,18 @@
   },
   "lavamoat": {
     "allowScripts": {
-      "gatsby": false,
-      "core-js": false,
-      "core-js-pure": false,
-      "gatsby-cli": false,
-      "gatsby-telemetry": false,
-      "fsevents": false,
-      "sharp": true,
-      "mozjpeg": false,
-      "pngquant-bin": false,
-      "puppeteer": false,
       "@lavamoat/preinstall-always-fail": false,
       "@xops.net/gatsby-openrpc-theme>gatsby-plugin-offline>workbox-build>strip-comments>babel-plugin-transform-object-rest-spread>babel-runtime>core-js": false,
       "@xops.net/gatsby-openrpc-theme>gatsby-plugin-sharp>imagemin-mozjpeg>mozjpeg": false,
       "@xops.net/gatsby-openrpc-theme>gatsby-plugin-sharp>imagemin-pngquant>pngquant-bin": false,
       "@xops.net/gatsby-openrpc-theme>gatsby-plugin-sharp>sharp": false,
       "@xops.net/gatsby-openrpc-theme>mermaid.cli>puppeteer": false,
+      "gatsby": false,
+      "gatsby-plugin-mdx>core-js": false,
       "gatsby>core-js": false,
       "gatsby>eslint-plugin-jsx-a11y>aria-query>@babel/runtime-corejs3>core-js-pure": false,
       "gatsby>gatsby-cli": false,
-      "gatsby>gatsby-telemetry": false,
-      "gatsby>webpack-dev-server>chokidar>fsevents": false
+      "gatsby>gatsby-telemetry": false
     }
   }
 }

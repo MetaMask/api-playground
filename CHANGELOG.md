@@ -6,12 +6,28 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-## [0.0.15]
+## [0.1.0]
 ### Changed
-- Update .nvmrc ([#46](https://github.com/MetaMask/api-playground/pull/46))
+- filename for metamask OpenRPC document ([#74](https://github.com/MetaMask/api-playground/pull/74))
+
+## [0.0.16]
+### Uncategorized
+- Updated inspector and logs-react to latest ([#65](https://github.com/MetaMask/api-playground/pull/65))
+- Updated docs with osx fix for sharp module ([#63](https://github.com/MetaMask/api-playground/pull/63))
+- build(deps): bump url-parse from 1.5.1 to 1.5.7 ([#50](https://github.com/MetaMask/api-playground/pull/50))
+- build(deps): bump trim-off-newlines from 1.0.1 to 1.0.3 ([#37](https://github.com/MetaMask/api-playground/pull/37))
+- build(deps): bump follow-redirects from 1.13.3 to 1.14.7 ([#38](https://github.com/MetaMask/api-playground/pull/38))
+- build(deps-dev): bump node-fetch from 2.6.1 to 2.6.7 ([#35](https://github.com/MetaMask/api-playground/pull/35))
+- build(deps): bump engine.io from 4.1.1 to 4.1.2 ([#39](https://github.com/MetaMask/api-playground/pull/39))
+- build(deps): bump simple-get from 3.1.0 to 3.1.1 ([#41](https://github.com/MetaMask/api-playground/pull/41))
+
+## [0.0.15]
 ### Added
 - Dynamic loading ([#45](https://github.com/MetaMask/api-playground/pull/45))
 - Document development ([#43](https://github.com/MetaMask/api-playground/pull/43))
+
+### Changed
+- Update .nvmrc ([#46](https://github.com/MetaMask/api-playground/pull/46))
 
 ## [0.0.14]
 
@@ -43,7 +59,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 - bump api-specs which adds wallet_switchEthereumChain ([#20](https://github.com/MetaMask/api-playground/pull/20))
 
-[Unreleased]: https://github.com/MetaMask/api-playground/compare/v0.0.15...HEAD
+[Unreleased]: https://github.com/MetaMask/api-playground/compare/v0.1.0...HEAD
+[0.1.0]: https://github.com/MetaMask/api-playground/compare/v0.0.16...v0.1.0
+[0.0.16]: https://github.com/MetaMask/api-playground/compare/v0.0.15...v0.0.16
 [0.0.15]: https://github.com/MetaMask/api-playground/compare/v0.0.14...v0.0.15
 [0.0.14]: https://github.com/MetaMask/api-playground/compare/v0.0.13...v0.0.14
 [0.0.13]: https://github.com/MetaMask/api-playground/compare/v0.0.12...v0.0.13
