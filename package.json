@@ -16,7 +16,7 @@
     "@open-rpc/schema-utils-js": "^1.14.3",
     "@xops.net/gatsby-openrpc-theme": "1.1.8",
     "gatsby": "2.32.11",
-    "gatsby-plugin-mdx": "^1.0.67",
+    "gatsby-plugin-mdx": "^2.14.1",
     "loader-utils": "2.0.4",
     "lodash": "^4.17.15",
     "monaco-editor": "0.18.1",
