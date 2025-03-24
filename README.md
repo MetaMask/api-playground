@@ -6,7 +6,7 @@ This repo uses https://github.com/MetaMask/api-specs to provide a playground to 
 
 Uses Gatsby.js. [Getting your development environment set up](https://www.gatsbyjs.com/docs/tutorial/part-0/).
 
-- Install node.js if you don't have it. Version 14.17.5
+- Install Node.js v18 if you don't have it.
 - Install Gatsby if you don't have it:`npm i -g gatsby-cli`
 - Install yarn if you don't have it:`npm i -g yarn`
 - Install dependencies: `yarn setup`.
