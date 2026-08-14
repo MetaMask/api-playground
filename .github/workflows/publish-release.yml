@@ -15,19 +15,19 @@ jobs:
       startsWith(github.event.pull_request.head.ref, 'release/')
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@0717577d45739eb3c851188b29f50ed6c0b2194e # v2.8.0
       - name: Get Node.js version
         id: nvm
         run: echo ::set-output name=NODE_VERSION::$(cat .nvmrc)
-      - uses: actions/setup-node@v2
+      - uses: actions/setup-node@7c12f8017d5436eb855f1ed4399f037a36fbd9e8 # v2.5.2
         with:
           node-version: ${{ steps.nvm.outputs.NODE_VERSION }}
       - run: yarn --frozen-lockfile
       - run: yarn allow-scripts
-      - uses: MetaMask/action-publish-release@v1
+      - uses: MetaMask/action-publish-release@7279ba5a5ca31a8b8474b6897caa610fb3298fa9 # v1.0.3
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - uses: MetaMask/action-publish-gh-pages@v1
+      - uses: MetaMask/action-publish-gh-pages@ec08d9585e6c5ffc523920cf433ed75bb53bbbdd # v1.1.1
         with: 
           directory: public
         env:
